@@ -3,7 +3,6 @@ import { Navbar } from "../components/componentsHeader/Navbar";
 import PhotoAlbum from "@/components/bodyComponentes/AlbumPhotos";
 import Footer from "@/components/footerComponents/Footer";
 import WhatsAppButton from "@/components/bodyComponentes/WhatsAppButton";
-import ProcedurePresentation from "@/components/bodyComponentes/ProcedurePresentation";
 
 export default function Home() {
   return (

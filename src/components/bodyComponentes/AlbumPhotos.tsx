@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const photos = [
@@ -22,7 +23,7 @@ const PhotoAlbum = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {photos.map(photo => (
           <div key={photo.id} className="overflow-hidden rounded-lg shadow-lg">
-            <img
+            <Image
               src={photo.src}
               alt={photo.alt}
               className="w-full h-48 object-cover"
