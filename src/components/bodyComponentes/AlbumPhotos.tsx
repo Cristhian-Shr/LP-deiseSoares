@@ -24,6 +24,8 @@ const PhotoAlbum = () => {
         {photos.map(photo => (
           <div key={photo.id} className="overflow-hidden rounded-lg shadow-lg">
             <Image
+              width={100}
+              height={100}
               src={photo.src}
               alt={photo.alt}
               className="w-full h-48 object-cover"

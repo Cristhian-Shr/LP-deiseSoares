@@ -28,10 +28,10 @@ const Footer = () => {
                         <p>Faciais</p>
                     </div>
 
-                    <div className="mb-4 md:mb-0">
+                    <div className="mb-4 md:mb-0 flex flex-col">
                         <h3 className="text-lg font-bold"></h3>
-                        <p>Política de Privacidade</p>
-                        <p>FAQ</p>
+                        <Link href=''>Política de Privacidade</Link>
+                        <Link href=''>FAQ</Link>
                     </div>
 
                     <div className="mb-4 md:mb-0">
