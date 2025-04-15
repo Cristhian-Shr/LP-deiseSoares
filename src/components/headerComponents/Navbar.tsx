@@ -10,19 +10,22 @@ export const Navbar: React.FC = () => {
   const [logo, setLogo] = useState(logoTipo);
 
   return (
-    <div className="flex px-20 items-center justify-between h-28 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)]">
-      <div className="bg-primary rounded-full px-2">
+    <div className="w-full flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 md:px-12 lg:px-20 h-auto py-4 md:py-6 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)]">
+      
+      {/* Logo */}
+      <div className="bg-primary rounded-full px-2 mb-4 md:mb-0">
         <Image 
           alt="logotipo" 
           src={logo} 
-          className="w-52 transition-all duration-300 px-2"
+          className="w-32 sm:w-40 lg:w-52 transition-all duration-300 px-2"
           onMouseEnter={() => setLogo(logoHover)} 
           onMouseLeave={() => setLogo(logoTipo)}
         />
       </div>
 
-      <nav className="text-terciary font-bold flex z-50">
-        <ul className="flex gap-4">
+      {/* Menu */}
+      <nav className="text-terciary font-bold flex">
+        <ul className="flex flex-col md:flex-row gap-4 text-center">
           <li className="hover:text-secondary duration-200">
             <Link href="/about">Sobre</Link>
           </li>
