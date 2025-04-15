@@ -2,10 +2,19 @@
 
 import Image from 'next/image'
 
-export default function ProcedurePresentation() {
+export default function ProcedurePresentation2() {
   return (
     <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-6 gap-10 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)]">
-      
+
+      {/* Texto */}
+      <div className="w-full md:w-1/2 text-center md:text-left">
+        <h2 className="text-3xl font-bold mb-4 text-white">Nome do Procedimento</h2>
+        <p className="text-lg text-white/80">
+          Aqui você pode descrever os benefícios do procedimento, como ele é feito,
+          resultados esperados e qualquer outra informação relevante.
+        </p>
+      </div>
+
       {/* Imagem com fundo */}
       <div className="relative w-full md:w-1/2 aspect-[4/3]">
         {/* Imagem de fundo decorativa */}
@@ -27,15 +36,6 @@ export default function ProcedurePresentation() {
             className="object-cover"
           />
         </div>
-      </div>
-
-      {/* Texto */}
-      <div className="w-full md:w-1/2 text-center md:text-left">
-        <h2 className="text-3xl font-bold mb-4 text-white">Nome do Procedimento</h2>
-        <p className="text-lg text-white/80">
-          Aqui você pode descrever os benefícios do procedimento, como ele é feito,
-          resultados esperados e qualquer outra informação relevante.
-        </p>
       </div>
     </section>
   )

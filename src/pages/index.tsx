@@ -3,6 +3,10 @@ import { Navbar } from "../components/componentsHeader/Navbar";
 import PhotoAlbum from "@/components/bodyComponentes/AlbumPhotos";
 import Footer from "@/components/footerComponents/Footer";
 import WhatsAppButton from "@/components/bodyComponentes/WhatsAppButton";
+import ProcedurePresentation from "@/components/bodyComponentes/ProcedurePresentation";
+import ProcedurePresentation2 from "@/components/bodyComponentes/ProcedurePresentation2";
+import ProcedurePresentation3 from "@/components/bodyComponentes/ProcedurePresentation3";
+
 
 export default function Home() {
   return (
@@ -10,7 +14,9 @@ export default function Home() {
       <Navbar />
       <WhatsAppButton />
       <AboutSection />
-      {/* <ProcedurePresentation/> */}
+      <ProcedurePresentation />
+      <ProcedurePresentation2 />
+      <ProcedurePresentation3 />
       <PhotoAlbum />
       <Footer />
     </div>

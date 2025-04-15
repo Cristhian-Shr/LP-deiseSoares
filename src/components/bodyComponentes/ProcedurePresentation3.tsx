@@ -2,9 +2,10 @@
 
 import Image from 'next/image'
 
-export default function ProcedurePresentation() {
+export default function ProcedurePresentation3() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-6 gap-10 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)]">
+    <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-6
+     gap-10 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)]">
       
       {/* Imagem com fundo */}
       <div className="relative w-full md:w-1/2 aspect-[4/3]">

@@ -6,7 +6,7 @@ import { SocialMedia } from './SocialMedia';
 
 const Footer = () => {
     return (
-        <footer className="bg-primary text-terciary py-6">
+        <footer className="bg-primary text-terciary py-6 h-44">
             <div className="mx-auto px-32">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div>
