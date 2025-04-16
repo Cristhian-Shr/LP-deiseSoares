@@ -13,7 +13,6 @@ export default function Home() {
       <Navbar />
       <WhatsAppButton />
       <AboutSection />
-
       <FacialProcedures />
       <BodyProcedures />
       <PhotoAlbum />
