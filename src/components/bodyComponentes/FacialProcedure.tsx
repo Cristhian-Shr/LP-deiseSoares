@@ -1,4 +1,5 @@
 'use client'
+import { useState } from 'react'
 import Image from 'next/image'
 
 type Procedure = {
@@ -61,11 +62,24 @@ const facialProcedures: Procedure[] = [
 ]
 
 export default function FacialProcedures() {
+  const [visibleCount, setVisibleCount] = useState(3)
+
+  const handleToggle = () => {
+    if (visibleCount >= facialProcedures.length) {
+      setVisibleCount(3)
+    } else {
+      setVisibleCount((prev) => prev + 3)
+    }
+  }
+
+  const isShowingAll = visibleCount >= facialProcedures.length
+
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-16 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)] items-center">
+    <section className="py-12 px-4 md:px-8 lg:px-40 items-center">
       <h2 className="text-3xl font-bold mb-8 text-center text-primary">Procedimentos Faciais</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {facialProcedures.map((item, index) => (
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {facialProcedures.slice(0, visibleCount).map((item, index) => (
           <div
             key={index}
             className="bg-gray-50 rounded-2xl shadow p-4 hover:shadow-lg transition flex flex-col items-center text-center"
@@ -73,14 +87,23 @@ export default function FacialProcedures() {
             <Image
               src={item.image}
               alt={item.title}
-              width={500}
-              height={300}
-              className="rounded-xl object-cover w-full h-60 mb-4"
+              width={300}
+              height={200}
+              className="rounded-xl object-cover h-60 mb-4 mx-auto max-w-[90%]"
             />
             <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
             <p className="text-gray-700 text-sm">{item.description}</p>
           </div>
         ))}
+      </div>
+
+      <div className="flex justify-center mt-10">
+        <button
+          onClick={handleToggle}
+          className="bg-secondary text-white font-semibold px-6 py-2 rounded-full hover:bg-primary transition"
+        >
+          {isShowingAll ? 'Mostrar menos' : 'Mostrar mais'}
+        </button>
       </div>
     </section>
   )

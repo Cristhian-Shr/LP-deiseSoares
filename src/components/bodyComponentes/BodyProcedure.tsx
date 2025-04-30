@@ -32,7 +32,7 @@ const bodyProcedures: Procedure[] = [
 
 export default function BodyProcedures() {
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-16 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)]">
+    <section className="py-12 px-4 md:px-8 lg:px-40 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)]">
       <h2 className="text-3xl font-bold mb-8 text-center text-primary">Procedimentos Corporais</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {bodyProcedures.map((item, index) => (

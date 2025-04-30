@@ -9,7 +9,7 @@ import BodyProcedures from "@/components/bodyComponentes/BodyProcedure";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen bg-terciary">
+    <div className="w-full h-full bg-terciary">
       <Navbar />
       <WhatsAppButton />
       <AboutSection />
