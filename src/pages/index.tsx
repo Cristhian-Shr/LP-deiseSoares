@@ -6,19 +6,20 @@ import WhatsAppButton from "@/components/bodyComponentes/WhatsAppButton";
 import FacialProcedures from "@/components/bodyComponentes/FacialProcedure";
 import BodyProcedures from "@/components/bodyComponentes/BodyProcedure";
 import CallToAction from "@/components/bodyComponentes/CallToAction";
-
+import Hero from "@/components/bodyComponentes/Hero";
 
 export default function Home() {
   return (
     <div className="w-full h-full bg-terciary">
       <Navbar />
-      <WhatsAppButton />
+      <Hero />
       <AboutSection />
       <FacialProcedures />
       <CallToAction />
       <BodyProcedures />
       <PhotoAlbum />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
