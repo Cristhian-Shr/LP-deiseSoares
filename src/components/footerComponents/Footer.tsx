@@ -24,32 +24,35 @@ const Footer = () => {
                     </div>
 
                     {/* Serviços */}
-                    <div>
+                    <div className='flex flex-col'>
                         <h3 className="text-lg font-bold mb-1">Serviços</h3>
-                        <p>Corporais</p>
-                        <p>Faciais</p>
+                       <Link href='#corporais' className='hover:text-secondary font-semibold'>Corporais</Link>
+                       <Link href='#faciais' className='hover:text-secondary font-semibold'>Faciais</Link>
+                        
                     </div>
 
                     {/* Links */}
                     <div className="flex flex-col">
                         <h3 className="text-lg font-bold mb-1">Links</h3>
-                        <Link href=''>Política de Privacidade</Link>
-                        <Link href=''>FAQ</Link>
+                        <Link href='' className='font-semibold hover:text-secondary'>Política de Privacidade</Link>
+                        <Link href='' className='font-semibold hover:text-secondary'>FAQ</Link>
                     </div>
 
                     {/* Contato */}
                     <div>
                         <h3 className="text-lg font-bold mb-1">Contato</h3>
-                        <p>Email: contato@exemplo.com</p>
-                        <p>Telefone: (11) 1234-5678</p>
+                        <p className='font-bold hover:text-secondary'>Email: contato@exemplo.com</p>
+                        <p className='font-bold hover:text-secondary'>Telefone: 51 99809-7108</p>
                     </div>
                 </div>
 
+                <div className='border border-secondary mt-5'></div>
+
                 {/* Linha final */}
-                <div className='flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 text-sm pt-8 text-center'>
+                <div className='flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 text-sm pt-4 text-center'>
                     <p className="font-bold">© 2025 Todos os direitos reservados.</p>
                     <p className='font-bold'>|</p>
-                    <Link href="#" className='hover:text-secondary hover:italic font-bold'>
+                    <Link href="https://www.dinamizasolucaodigital.com.br/" className='hover:text-blue-500 hover:italic font-bold'>
                         Dinamiza - Soluções Digitais
                     </Link>
                 </div>

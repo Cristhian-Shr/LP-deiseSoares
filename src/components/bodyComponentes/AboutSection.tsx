@@ -31,7 +31,7 @@ export const AboutSection: React.FC = () => {
                 </div>
             </div>
 
-            <div className="w-full lg:w-1/2 flex justify-center md:pt-36">
+            <div className="w-full lg:w-1/2 flex justify-center md:pt-36 lg:pt-72">
                 <Image
                     alt="Foto Deise"
                     src={photoAbout}

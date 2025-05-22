@@ -12,52 +12,52 @@ const facialProcedures: Procedure[] = [
   {
     title: 'Harmonização Facial',
     description: 'Conjunto de procedimentos estéticos não invasivos que melhoram a simetria e o equilíbrio do rosto, como preenchimentos, toxina botulínica e fios de PDO.',
-    image: '/images/faciais/harmonizacao.jpg',
+    image: '/procedimentos/24.png',
   },
   {
     title: 'Toxina Botulínica',
     description: 'Suaviza linhas de expressão e rugas relaxando os músculos faciais. Ideal para testa, olhos e sobrancelhas.',
-    image: '/images/faciais/botox.jpg',
+    image: '/procedimentos/25.png',
   },
   {
     title: 'Preenchimento com Ácido Hialurônico',
     description: 'Restaura volume no rosto e lábios, suaviza linhas finas e hidrata a pele.',
-    image: '/images/faciais/preenchimento.jpg',
+    image: '/procedimentos/26.png',
   },
   {
     title: 'Bioestimulador de Colágeno',
     description: 'Estimula a produção de colágeno, tratando flacidez e melhorando textura da pele.',
-    image: '/images/faciais/bioestimulador.jpg',
+    image: '/procedimentos/27.png',
   },
   {
     title: 'Microagulhamento',
     description: 'Cria microperfurações na pele para estimular colágeno, indicado para cicatrizes, manchas e poros dilatados.',
-    image: '/images/faciais/microagulhamento.jpg',
+    image: '/procedimentos/28.png',
   },
   {
     title: 'Peelings Químicos',
     description: 'Renovação celular com tratamento para manchas, acne, rugas e textura da pele.',
-    image: '/images/faciais/peeling.jpg',
+    image: '/procedimentos/29.png',
   },
   {
     title: 'Fios de PDO',
     description: 'Fios absorvíveis que promovem efeito lifting natural e estimulação de colágeno.',
-    image: '/images/faciais/fios.jpg',
+    image: '/procedimentos/30.png',
   },
   {
     title: 'Skinbooster',
     description: 'Microinjeções de ácido hialurônico que hidratam profundamente e rejuvenescem a pele.',
-    image: '/images/faciais/skinbooster.jpg',
+    image: '/procedimentos/31.png',
   },
   {
     title: 'Ultraformer III',
     description: 'Ultrassom para lifting facial e combate à flacidez com estimulação de colágeno.',
-    image: '/images/faciais/ultraformer.jpg',
+    image: '/procedimentos/32.png',
   },
   {
     title: 'Laser Lavieen',
     description: 'Laser fracionado para manchas, flacidez e textura irregular, com efeito “BB glow”.',
-    image: '/images/faciais/laser.jpg',
+    image: '/procedimentos/33.png',
   },
 ]
 
@@ -75,7 +75,7 @@ export default function FacialProcedures() {
   const isShowingAll = visibleCount >= facialProcedures.length
 
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-40 items-center">
+    <section className="py-12 px-4 md:px-8 lg:px-40 items-center" id='faciais'>
       <h2 className="text-3xl font-bold mb-8 text-center text-primary">Procedimentos Faciais</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

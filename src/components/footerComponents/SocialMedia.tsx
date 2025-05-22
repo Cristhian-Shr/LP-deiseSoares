@@ -5,9 +5,7 @@ export const SocialMedia = () => {
     return (
         <ul className="flex justify-center gap-2 pt-2">
             <li>
-                <Link href=''
-                    className="dark:text-blue-500 hover:text-blue-400"
-                >
+                <Link href='https://www.facebook.com/profile.php?id=100094529882485#' target='_blank' className="text-blue-500 hover:text-blue-400" >
                     <svg
                         aria-hidden="true"
                         viewBox="0 0 24 24"

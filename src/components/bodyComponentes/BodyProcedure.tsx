@@ -11,28 +11,28 @@ const bodyProcedures: Procedure[] = [
   {
     title: 'Harmonização Glútea',
     description: 'Melhora o contorno, volume e trata celulite e flacidez nos glúteos com preenchedores e bioestimuladores.',
-    image: '/images/corporais/glutea.jpg',
+    image: '/procedimentos/20.png',
   },
   {
     title: 'Lipo Enzimática',
     description: 'Reduz gordura localizada com enzimas que quebram células de gordura, promovendo contorno corporal.',
-    image: '/images/corporais/lipo.jpg',
+    image: '/procedimentos/21.png',
   },
   {
     title: 'PEIM',
     description: 'Tratamento injetável para microvasos e varizes, melhorando a aparência das pernas.',
-    image: '/images/corporais/peim.jpg',
+    image: '/procedimentos/22.png',
   },
   {
     title: 'Tratamentos para Celulite',
     description: 'Mesoterapia, bioestimuladores e ultrassom para reduzir inflamação e flacidez, promovendo pele lisa.',
-    image: '/images/corporais/celulite.jpg',
+    image: '/procedimentos/23.png',
   },
 ]
 
 export default function BodyProcedures() {
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-40 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)]">
+    <section className="py-12 px-4 md:px-8 lg:px-40 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)]" id='corporais'>
       <h2 className="text-3xl font-bold mb-8 text-center text-primary">Procedimentos Corporais</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {bodyProcedures.map((item, index) => (
