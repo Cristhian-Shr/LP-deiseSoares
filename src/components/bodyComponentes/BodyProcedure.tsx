@@ -32,7 +32,7 @@ const bodyProcedures: Procedure[] = [
 
 export default function BodyProcedures() {
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-40 bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)]" id='corporais'>
+    <section className="py-12 px-4 md:px-8 lg:px-40" id='corporais'>
       <h2 className="text-3xl font-bold mb-8 text-center text-primary">Procedimentos Corporais</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {bodyProcedures.map((item, index) => {
@@ -42,7 +42,7 @@ export default function BodyProcedures() {
           return (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow p-4 hover:shadow-lg transition flex flex-col items-center text-center"
+              className="bg-primary/90 rounded-2xl shadow p-4 hover:shadow-lg transition flex flex-col items-center text-center"
             >
               <Image
                 src={item.image}
@@ -51,13 +51,13 @@ export default function BodyProcedures() {
                 height={300}
                 className="rounded-xl object-cover w-full h-60 mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-700 text-sm mb-4">{item.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-secondary">{item.title}</h3>
+              <p className="text-sm md:text-base mb-4 text-terciary">{item.description}</p>
               <a
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition"
+                className="mt-auto font-bold bg-terciary text-primary px-4 py-2 rounded-full hover:bg-terciary/80 transition"
               >
                 Quero saber mais!
               </a>

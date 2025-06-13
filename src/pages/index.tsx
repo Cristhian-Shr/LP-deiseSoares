@@ -6,6 +6,7 @@ import WhatsAppButton from "@/components/bodyComponentes/WhatsAppButton";
 import FacialProcedures from "@/components/bodyComponentes/FacialProcedure";
 import BodyProcedures from "@/components/bodyComponentes/BodyProcedure";
 import CallToAction from "@/components/bodyComponentes/CallToAction";
+import Testimonials from "@/components/bodyComponentes/Testimonials";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <FacialProcedures />
       <CallToAction />
       <BodyProcedures />
+      <Testimonials />
       <PhotoAlbum />
       <Footer />
     </div>

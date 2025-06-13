@@ -6,7 +6,7 @@ import { SocialMedia } from './SocialMedia';
 
 const Footer = () => {
     return (
-        <footer className="bg-primary text-terciary py-6">
+        <footer className="bg-primary/90 text-terciary py-6">
             <div className="mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
                 <div className="flex flex-col md:flex-row flex-wrap justify-between items-center gap-8 text-center md:text-left">
                     
@@ -31,12 +31,12 @@ const Footer = () => {
                         
                     </div>
 
-                    {/* Links */}
+                    {/* Links
                     <div className="flex flex-col">
                         <h3 className="text-lg font-bold mb-1">Links</h3>
                         <Link href='' className='font-semibold hover:text-secondary'>Política de Privacidade</Link>
                         <Link href='' className='font-semibold hover:text-secondary'>FAQ</Link>
-                    </div>
+                    </div> */}
 
                     {/* Contato */}
                     <div>
@@ -53,7 +53,7 @@ const Footer = () => {
                     <p className="font-bold">© 2025 Todos os direitos reservados.</p>
                     <p className='font-bold'>|</p>
                     <Link href="https://www.dinamizasolucaodigital.com.br/" className='hover:text-blue-500 hover:italic font-bold'>
-                        Dinamiza - Soluções Digitais
+                        Dinamiza - Soluções Digitais.
                     </Link>
                 </div>
             </div>

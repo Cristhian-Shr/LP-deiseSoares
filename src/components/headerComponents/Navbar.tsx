@@ -3,27 +3,33 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { IoMenu, IoClose } from "react-icons/io5";
+
 import logoTipo from '../../../public/logo/1.png';
 import logoHover from '../../../public/logo/2.png';
-import { IoMenu } from "react-icons/io5";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
 export const Navbar: React.FC = () => {
   const [logo, setLogo] = useState(logoTipo);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => setIsOpen(!isOpen);
+  const handleCloseMenu = () => setIsOpen(false);
+
+  const links = [
+    { label: "Sobre", href: "#sobre" },
+    { label: "Faciais", href: "#faciais" },
+    { label: "Corporais", href: "#corporais" },
+    { label: "Resultados", href: "#resultados" },
+    { label: "Depoimentos", href: "#depoimentos" },
+    { label: "Contato", href: "#contato" },
+  ];
 
   return (
-    <div className="w-full h-20 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-40 py-2 bg-primary/80">
-      {/* bg-[linear-gradient(to_right,#c1c3b7,#a1a696,#808b77,#405740,#405740)] */}
+    <header className="w-full h-20 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-40 py-2 bg-primary/90 z-50 fixed top-0 left-0">
       {/* Logo */}
-      <div className="">
-      {/* bg-primary rounded-full px-2 mb-4 md:mb-0 */}
+      <div>
         <Image
-          alt="logotipo"
+          alt="Logotipo"
           src={logo}
           className="w-32 sm:w-40 lg:w-44 transition-all duration-300 px-2"
           onMouseEnter={() => setLogo(logoHover)}
@@ -31,52 +37,37 @@ export const Navbar: React.FC = () => {
         />
       </div>
 
-      {/* Menu tradicional (somente tablet e desktop) */}
+      {/* Menu desktop */}
       <nav className="hidden md:flex text-terciary font-bold">
         <ul className="flex gap-6">
-          <li className="hover:text-secondary duration-200">
-            <Link href="/about">Sobre</Link>
-          </li>
-          <li className="hover:text-secondary duration-200">
-            <Link href="/services">Serviços</Link>
-          </li>
-          <li className="hover:text-secondary duration-200">
-            <Link href="/results">Resultados</Link>
-          </li>
-          <li className="hover:text-secondary duration-200">
-            <Link href="/testimonials">Depoimentos</Link>
-          </li>
-          <li className="hover:text-secondary duration-200">
-            <Link href="/contact">Contato</Link>
-          </li>
+          {links.map((item) => (
+            <li key={item.href} className="hover:text-secondary duration-200">
+              <Link href={item.href}>{item.label}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
 
-      {/* Dropdown menu (somente no celular) */}
-      <div className="block md:hidden">
-        <DropdownMenu>
-          <DropdownMenuTrigger className="text-5xl text-terciary">
-            <IoMenu />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-primary border-secondary mr-5 w-40 h-48 font-bold text-secondary flex flex-col items-center">
-            <DropdownMenuItem className="py-2 hover:text-terciary w-full text-center ">
-              <Link href="/about">Sobre</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem className="py-2 hover:text-terciary w-full text-center">
-              <Link href="/services">Serviços</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem className="py-2 hover:text-terciary w-full text-center">
-              <Link href="/results">Resultados</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem className="py-2 hover:text-terciary w-full text-center">
-              <Link href="/testimonials">Depoimentos</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem className="py-2 hover:text-terciary w-full text-center">
-              <Link href="/contact">Contato</Link>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
-    </div>
+      {/* Ícone menu mobile */}
+      <button onClick={handleToggle} className="block md:hidden text-4xl text-terciary z-50">
+        {isOpen ? <IoClose /> : <IoMenu />}
+      </button>
+
+      {/* Menu mobile fullscreen */}
+      {isOpen && (
+        <div className="fixed inset-0 bg-primary text-secondary flex flex-col justify-center items-center gap-6 font-bold text-xl z-40 transition-all duration-300">
+          {links.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={handleCloseMenu}
+              className="hover:text-terciary duration-200"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </header>
   );
 };

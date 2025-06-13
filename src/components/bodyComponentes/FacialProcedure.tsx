@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 type Procedure = {
   title: string
@@ -77,7 +78,7 @@ export default function FacialProcedures() {
   return (
     <section className="py-12 px-4 md:px-8 lg:px-40 items-center" id='faciais'>
       <h2 className="text-3xl font-bold mb-8 text-center text-primary">Procedimentos Faciais</h2>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {facialProcedures.slice(0, visibleCount).map((item, index) => {
           const message = encodeURIComponent(`Olá, gostaria de saber mais sobre o procedimento: ${item.title}`)
@@ -86,7 +87,7 @@ export default function FacialProcedures() {
           return (
             <div
               key={index}
-              className="bg-gray-50 rounded-2xl shadow p-4 hover:shadow-lg transition flex flex-col items-center text-center"
+              className="bg-primary/90 rounded-2xl shadow-xl p-4 hover:shadow-lg transition flex flex-col items-center text-center"
             >
               <Image
                 src={item.image}
@@ -95,16 +96,16 @@ export default function FacialProcedures() {
                 height={200}
                 className="rounded-xl object-cover h-60 mb-4 mx-auto max-w-[90%]"
               />
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-700 text-sm mb-4">{item.description}</p>
-              <a
+              <h3 className="text-xl font-bold mb-2 text-secondary">{item.title}</h3>
+              <p className="text-terciary text-sm md:text-base mb-4">{item.description}</p>
+              <Link
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition"
+                className="mt-auto bg-terciary font-bold text-primary px-4 py-2 rounded-full hover:bg-terciary/90 transition"
               >
                 Quero saber mais!
-              </a>
+              </Link>
             </div>
           )
         })}

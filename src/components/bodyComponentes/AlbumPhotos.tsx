@@ -26,6 +26,7 @@ const photos = [
   { id: 17, src: '/resultados/18.png', alt: 'Foto 17', description: 'Preenchimento de olheiras' },
   { id: 18, src: '/resultados/19.png', alt: 'Foto 18', description: 'Preenchimento de malar e mandíbula' },
   { id: 19, src: '/resultados/20.jpg', alt: 'Foto 19', description: 'Harmonização facial (toxina botulínica, bioestimulador de colágeno, preenchimento de malar e olheiras)' },
+  { id: 20, src: '/resultados/21.jpg', alt: 'Foto 20', description: 'Harmonização facial (preenchimento de lábios, mento e mandíbula)' },
 ];
 
 
@@ -66,8 +67,8 @@ const PhotoAlbum = () => {
   }, [slider]);
 
   return (
-    <div className="w-full px-4 lg:px-40 py-10 relative">
-      <h2 className="text-3xl font-bold text-center mb-8 text-primary">Resultados</h2>
+    <div className="w-full px-4 lg:px-40 py-10 relative bg-primary/90" id='resultados'>
+      <h2 className="text-3xl font-bold text-center mb-8 text-terciary">Resultados</h2>
 
       {/* Botões */}
       <button
@@ -96,7 +97,7 @@ const PhotoAlbum = () => {
                 className="w-full h-auto object-cover rounded-2xl"
               />
             </div>
-            <p className="mt-3 text-center font-bold text-primary">{photo.description}</p>
+            <p className="mt-3 text-center font-bold text-secondary">{photo.description}</p>
           </div>
         ))}
       </div>
