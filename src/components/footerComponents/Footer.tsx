@@ -31,17 +31,10 @@ const Footer = () => {
                         
                     </div>
 
-                    {/* Links
-                    <div className="flex flex-col">
-                        <h3 className="text-lg font-bold mb-1">Links</h3>
-                        <Link href='' className='font-semibold hover:text-secondary'>Política de Privacidade</Link>
-                        <Link href='' className='font-semibold hover:text-secondary'>FAQ</Link>
-                    </div> */}
-
                     {/* Contato */}
                     <div>
                         <h3 className="text-lg font-bold mb-1">Contato</h3>
-                        <p className='font-bold hover:text-secondary'>Email: contato@exemplo.com</p>
+                        <p className='font-bold hover:text-secondary'>Email: deisesoaresbiomedica@gmail.com</p>
                         <p className='font-bold hover:text-secondary'>Telefone: 51 99809-7108</p>
                     </div>
                 </div>
