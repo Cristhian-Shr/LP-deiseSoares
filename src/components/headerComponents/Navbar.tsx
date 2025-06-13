@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="w-full h-20 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-40 py-2 bg-primary/90 z-50 fixed top-0 left-0">
+    <header className="w-full h-20 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-40 py-2 bg-primary/90 z-50 top-0 left-0">
       {/* Logo */}
       <div>
         <Image
