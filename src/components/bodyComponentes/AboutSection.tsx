@@ -3,8 +3,8 @@ import photoAbout from '../../../public/fotos/deiseSemFundo2.png';
 
 export const AboutSection: React.FC = () => {
     return (
-        <div id='sobre' className="w-full lg:h-screen flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-20 xl:px-40 gap-10 lg:gap-20 lg:py-10 pt-28 md:pt-28">
-            <div className="w-full lg:w-1/2 flex flex-col gap-4 items-center lg:items-center text-center lg:text-left font-bold">
+        <div id='sobre' className="w-full lg:h-screen flex flex-col lg:flex-row items-center justify-center px-4 md:px-8 lg:px-20 xl:px-40 gap-10 lg:gap-20 lg:py-10 md:pt-28">
+            <div className="w-full lg:w-1/2 flex flex-col gap-4 items-center lg:items-center text-center lg:text-left font-bold pt-10">
                 <h1 className="font-bold text-primary text-3xl sm:text-4xl mt-10 md:mt-0">Dra. Deise Soares</h1>
                 <span className="px-4 text-secondary italic text-sm font-bold rounded-full bg-terciary">
                     Biomédica Esteta | Especialista em Harmonização Facial e Corporal
