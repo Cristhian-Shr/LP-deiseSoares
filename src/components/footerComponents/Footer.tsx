@@ -8,36 +8,37 @@ const Footer = () => {
     return (
         <footer className="bg-primary/90 text-terciary py-6">
             <div className="mx-auto px-4 sm:px-8 md:px-16 lg:px-32">
-                <div className="flex flex-col md:flex-row flex-wrap justify-between items-center gap-8 text-center md:text-left">
-                    
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 text-center md:text-center items-center">
+
                     {/* Logo */}
-                    <div className="w-full md:w-auto">
-                        <Image src={logo} width={160} alt="Logo" className="mx-auto md:mx-0" />
+                    <div className="mx-auto xl:mx-0">
+                        <Image src={logo} width={160} alt="Logo" />
                     </div>
 
                     {/* Redes Sociais */}
                     <div>
                         <h3 className="text-lg font-bold mb-1">Redes Sociais</h3>
-                        <div className="flex justify-center md:justify-start space-x-4">
+                        <div className="flex justify-center space-x-4">
                             <SocialMedia />
                         </div>
                     </div>
 
                     {/* Serviços */}
-                    <div className='flex flex-col'>
+                    <div className="flex flex-col">
                         <h3 className="text-lg font-bold mb-1">Serviços</h3>
-                       <Link href='#corporais' className='hover:text-secondary font-semibold'>Corporais</Link>
-                       <Link href='#faciais' className='hover:text-secondary font-semibold'>Faciais</Link>
-                        
+                        <Link href="#corporais" className="hover:text-secondary font-semibold">Corporais</Link>
+                        <Link href="#faciais" className="hover:text-secondary font-semibold">Faciais</Link>
                     </div>
 
                     {/* Contato */}
                     <div>
                         <h3 className="text-lg font-bold mb-1">Contato</h3>
-                        <p className='font-bold hover:text-secondary'>Email: deisesoaresbiomedica@gmail.com</p>
-                        <p className='font-bold hover:text-secondary'>Telefone: 51 99809-7108</p>
+                        <p className="font-bold hover:text-secondary">Email: deisesoaresbiomedica@gmail.com</p>
+                        <p className="font-bold hover:text-secondary">Telefone: 51 99809-7108</p>
                     </div>
+
                 </div>
+
 
                 <div className='border border-secondary mt-5'></div>
 

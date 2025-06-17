@@ -12,9 +12,9 @@ const WhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-32 right-20 bg-green-600 text-white rounded-full p-3 shadow-lg hover:bg-green-700 transition duration-300 z-50"
+      className="fixed md:bottom-28 bottom-20 right-10 bg-green-600 text-white rounded-full p-3 shadow-lg hover:bg-green-700 transition duration-300 z-50"
     >
-      <BsWhatsapp className='w-8 h-8' />
+      <BsWhatsapp className='w-5 h-5 md:w-8 md:h-8' />
     </Link>
   );
 };

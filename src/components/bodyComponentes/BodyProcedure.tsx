@@ -1,5 +1,7 @@
 'use client'
+import { useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 type Procedure = {
   title: string
@@ -28,22 +30,29 @@ const bodyProcedures: Procedure[] = [
     description: 'Mesoterapia, bioestimuladores e ultrassom para reduzir inflamação e flacidez, promovendo pele lisa.',
     image: '/procedimentos/23.png',
   },
+  {
+    title: 'Bioestimulador de Colágeno Corporal',
+    description: 'Estimula a produção de colágeno, ajudando a combater a flacidez e melhorar a textura da pele. Utilizado em regiões como abdômen, braços, interno de coxas, culotes e glúteos.',
+    image: '/procedimentos/34.jpg',
+  },
 ]
 
 export default function BodyProcedures() {
+  const [showAll, setShowAll] = useState(false)
+
+  const proceduresToShow = showAll ? bodyProcedures : bodyProcedures.slice(0, 3)
+
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-40" id='corporais'>
+    <section className="py-12 px-4 md:px-10 lg:px-10 justify-center xl:px-40 items-center" id="corporais">
       <h2 className="text-3xl font-bold mb-8 text-center text-primary">Procedimentos Corporais</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {bodyProcedures.map((item, index) => {
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-8">
+        {proceduresToShow.map((item, index) => {
           const message = encodeURIComponent(`Olá, gostaria de saber mais sobre o procedimento: ${item.title}`)
-          const whatsappLink = `https://wa.me/5551998097108?text=${message}` 
-          
+          const whatsappLink = `https://wa.me/5551998097108?text=${message}`
+
           return (
-            <div
-              key={index}
-              className="bg-primary/90 rounded-2xl shadow p-4 hover:shadow-lg transition flex flex-col items-center text-center"
-            >
+            <div key={index} className="bg-primary/90 rounded-2xl shadow p-4 hover:shadow-lg transition flex flex-col items-center text-center max-w-sm mx-auto">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -53,17 +62,27 @@ export default function BodyProcedures() {
               />
               <h3 className="text-xl font-semibold mb-2 text-secondary">{item.title}</h3>
               <p className="text-sm md:text-base mb-4 text-terciary">{item.description}</p>
-              <a
+              <Link
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-auto font-bold bg-terciary text-primary px-4 py-2 rounded-full hover:bg-terciary/80 transition"
               >
                 Quero saber mais!
-              </a>
+              </Link>
             </div>
           )
         })}
+      </div>
+
+      {/* Botão Mostrar Mais / Mostrar Menos */}
+      <div className="mt-8 text-center">
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="font-bold bg-secondary text-white px-6 py-3 rounded-full hover:bg-secondary/80 transition"
+        >
+          {showAll ? 'Mostrar menos' : 'Mostrar mais'}
+        </button>
       </div>
     </section>
   )

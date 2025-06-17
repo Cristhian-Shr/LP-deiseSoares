@@ -38,7 +38,7 @@ export const Navbar: React.FC = () => {
       </div>
 
       {/* Menu desktop */}
-      <nav className="hidden md:flex text-terciary font-bold">
+      <nav className="hidden xl:flex text-terciary font-bold">
         <ul className="flex gap-6">
           {links.map((item) => (
             <li key={item.href} className="hover:text-secondary duration-200">
@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
       </nav>
 
       {/* Ícone menu mobile */}
-      <button onClick={handleToggle} className="block md:hidden text-4xl text-terciary z-50">
+      <button onClick={handleToggle} className="block xl:hidden text-4xl text-terciary z-50">
         {isOpen ? <IoClose /> : <IoMenu />}
       </button>
 

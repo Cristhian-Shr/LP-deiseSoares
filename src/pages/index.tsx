@@ -16,8 +16,8 @@ export default function Home() {
       <WhatsAppButton />
       <AboutSection />
       <FacialProcedures />
-      <CallToAction />
       <BodyProcedures />
+      <CallToAction />
       <Testimonials />
       <PhotoAlbum />
       <Footer />

@@ -67,7 +67,7 @@ const PhotoAlbum = () => {
   }, [slider]);
 
   return (
-    <div className="w-full px-4 lg:px-40 py-10 relative bg-primary/90" id='resultados'>
+    <div className="w-full px-4 lg:px-40 pt-5 md:py-10 relative bg-primary/90" id='resultados'>
       <h2 className="text-3xl font-bold text-center mb-8 text-terciary">Resultados</h2>
 
       {/* Botões */}

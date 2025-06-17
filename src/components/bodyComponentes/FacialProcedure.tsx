@@ -76,7 +76,7 @@ export default function FacialProcedures() {
   const isShowingAll = visibleCount >= facialProcedures.length
 
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-40 items-center" id='faciais'>
+    <section className="py-12 md:pt-40 px-4 md:px-8 lg:px-10 xl:px-40 items-center" id='faciais'>
       <h2 className="text-3xl font-bold mb-8 text-center text-primary">Procedimentos Faciais</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -114,7 +114,7 @@ export default function FacialProcedures() {
       <div className="flex justify-center mt-10">
         <button
           onClick={handleToggle}
-          className="bg-secondary text-white font-semibold px-6 py-2 rounded-full hover:bg-primary transition"
+          className="bg-secondary text-white font-semibold px-6 py-2 rounded-full hover:bg-secondary/80 transition"
         >
           {isShowingAll ? 'Mostrar menos' : 'Mostrar mais'}
         </button>
