@@ -7,6 +7,7 @@ import FacialProcedures from "@/components/bodyComponentes/FacialProcedure";
 import BodyProcedures from "@/components/bodyComponentes/BodyProcedure";
 import CallToAction from "@/components/bodyComponentes/CallToAction";
 import Testimonials from "@/components/bodyComponentes/Testimonials";
+import ScrollToTop from "@/components/bodyComponentes/ScrollToTop";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     <div className="w-full h-full bg-terciary">
       <Navbar />
       <WhatsAppButton />
+      <ScrollToTop />
       <AboutSection />
       <FacialProcedures />
       <BodyProcedures />

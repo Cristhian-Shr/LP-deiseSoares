@@ -92,8 +92,8 @@ export default function FacialProcedures() {
               <Image
                 src={item.image}
                 alt={item.title}
-                width={300}
-                height={200}
+                width={400}
+                height={300}
                 className="rounded-xl object-cover h-60 mb-4 mx-auto max-w-[90%]"
               />
               <h3 className="text-xl font-bold mb-2 text-secondary">{item.title}</h3>

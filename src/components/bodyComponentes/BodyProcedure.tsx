@@ -52,13 +52,13 @@ export default function BodyProcedures() {
           const whatsappLink = `https://wa.me/5551998097108?text=${message}`
 
           return (
-            <div key={index} className="bg-primary/90 rounded-2xl shadow p-4 hover:shadow-lg transition flex flex-col items-center text-center max-w-sm mx-auto">
+            <div key={index} className="bg-primary/90 rounded-2xl shadow p-4 hover:shadow-lg transition flex flex-col items-center text-center mx-auto">
               <Image
                 src={item.image}
                 alt={item.title}
-                width={500}
+                 width={400}
                 height={300}
-                className="rounded-xl object-cover w-full h-60 mb-4"
+                className="rounded-xl object-cover h-60 mb-4 mx-auto max-w-[90%]"
               />
               <h3 className="text-xl font-semibold mb-2 text-secondary">{item.title}</h3>
               <p className="text-sm md:text-base mb-4 text-terciary">{item.description}</p>
