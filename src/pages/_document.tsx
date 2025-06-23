@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import { Html, Head, Main, NextScript } from "next/document";
+
+export const metadata: Metadata = {
+  title: "Dra. Deise Soares | Biomédica Estéta",
+  description: "Landing page criada por Dinamiza Digital",
+};
 
 export default function Document() {
   return (
